@@ -12,23 +12,23 @@ class App extends Component {
   };
 
   // display a routine of 10 random exercises on page load
-  componentDidMount() {
-    this.getRandomWorkout();
-  }
+  // componentDidMount() {
+  //   this.getRandomWorkout();
+  // }
 
   // GET request for workout based on filters stored in state
   // response routine is then stored in state
-  async getRandomWorkout() {
-    const response = await fetch(
-      `https://fast-eyrie-14303.herokuapp.com/workout?type=${this.state.target.join(
-        ","
-      )}&limit=${this.state.limit}`
-    );
-    const data = await response.json();
-    this.setState({
-      routine: data.exercises,
-    });
-  }
+  // async getRandomWorkout() {
+  //   const response = await fetch(
+  //     `https://fast-eyrie-14303.herokuapp.com/workout?type=${this.state.target.join(
+  //       ","
+  //     )}&limit=${this.state.limit}`
+  //   );
+  //   const data = await response.json();
+  //   this.setState({
+  //     routine: data.exercises,
+  //   });
+  // }
 
   // specifies the target muscle groups
   // pushes the muscle groups of checked input boxes to state
@@ -57,7 +57,8 @@ class App extends Component {
         <WorkoutFilter
           changeTarget={this.changeTarget.bind(this)}
           changeLimit={this.changeLimit.bind(this)}
-          getRandomWorkout={this.getRandomWorkout.bind(this)}
+          // getRandomWorkout={this.getRandomWorkout.bind(this)}
+          getRandomWorkout="30"
         />
         <WorkoutRoutine routine={this.state.routine} />
       </Container>
