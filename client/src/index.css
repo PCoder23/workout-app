@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceberg&family=Montserrat&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#0a0a0b, #0d2b39);
+}
+
+header {
+  font-family: "Iceberg", cursive;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
